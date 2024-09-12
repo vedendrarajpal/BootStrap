@@ -1,0 +1,277 @@
+{% include 'head.html' %}
+{% block head %}
+{% endblock %}
+
+
+<a href="https://wa.me/919950901735" class="whatsapp-button">
+    <img src="{{ url_for('static', filename='assets/whatsapp.png') }}" class="whatsapp-icon" width="40" height="40">
+    Hi
+</a>
+
+        
+        <!-- Header-->
+        <header class="bg-dark py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div class="text-center text-white">
+                    <h1 class="display-4 fw-bolder" style="font-family: 'Courier New', Courier, monospace;">Heritage wear</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">make your own fashion</p>
+                </div>
+            </div>
+        </header>
+        <!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{url_for('static',filename = 'assets/po1.jpg')}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">royal red Rajputi poshak</h5>
+                                    <!-- Product price-->
+                                    2500
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{url_for('static',filename = 'assets/po2.jpg')}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">ROYAL BLUE</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    18.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{url_for('static',filename = 'assets/po3.jpg')}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Sale Item</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{url_for('static',filename = 'assets/po4.jpg')}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{url_for('static',filename = 'assets/po5.jpg')}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Sale Item</h5>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$50.00</span>
+                                    $25.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{url_for('static',filename = 'assets/po6.jpg')}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Fancy Product</h5>
+                                    <!-- Product price-->
+                                    $120.00 - $280.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Sale badge-->
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{url_for('static',filename = 'assets/po7.jpg')}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Special Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    $18.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!-- Product image-->
+                            <img class="card-img-top" src="{{url_for('static',filename = 'assets/po8.jpg')}}" alt="..." />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $40.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- see more -->
+        <div style="text-align: right;">
+            <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" style="margin-right: 50px;margin-bottom: 20px;">
+                <a href="/shop/" style="color: black;">See More</a>
+            </button>
+        </div>
+        
+        <section class="about-us">
+            <div class="container">
+                <h1>About Us</h1>
+                <p>Welcome to our company! We are committed to delivering the best services to our clients. Our team is dedicated, passionate, and always striving for excellence.
+                    Step into the world of royal elegance with Attire by Preet, where tradition meets sophistication. Founded in 2019, we are passionate artisans dedicated to the art of crafting authentic Rajputi poshak, the regal attire that has long been a symbol of grace and nobility.
+    
+    Our journey began with a vision to revive and celebrate the opulent heritage of Rajputi clothing. Each poshak we create is a testament to our commitment to excellence, blending intricate designs with luxurious fabrics to offer you timeless beauty and unparalleled quality.
+    
+    At Attire by Preet, we believe that every woman deserves to feel like royalty. Our collections are meticulously handcrafted, ensuring that every piece reflects the grandeur of Rajputi culture and tradition. Whether you’re seeking a breathtaking ensemble for a grand celebration or a delicate touch of elegance for everyday wear, our curated range promises to deliver.
+    
+    Discover the essence of royal attire with Attire by Preet, and embrace the majestic charm of Rajputi fashion. Thank you for being part of our story—where tradition meets artistry in every stitch.
+                </p>
+                <script>
+                    // Function to add item to the cart
+                    function addToCart(productName, productPrice) {
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        cart.push({ name: productName, price: productPrice });
+                        localStorage.setItem('cart', JSON.stringify(cart));
+                        updateCartCount();
+                    }
+                    
+                    // Function to update the cart count in the navbar
+                    function updateCartCount() {
+                        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+                        document.querySelector('.badge').innerText = cart.length;
+                    }
+                    
+                    // Update cart count on page load
+                    document.addEventListener('DOMContentLoaded', updateCartCount);
+                    
+                    // Event listeners for "Add to Cart" buttons
+                    document.querySelectorAll('.btn-outline-dark').forEach(button => {
+                        button.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            let productCard = this.closest('.card');
+                            let productName = productCard.querySelector('.fw-bolder').innerText;
+                            let productPrice = productCard.querySelector('.text-muted') 
+                                               ? productCard.querySelector('.text-muted').nextSibling.textContent.trim()
+                                               : productCard.querySelector('.fw-bolder').nextSibling.textContent.trim();
+                            addToCart(productName, productPrice);
+                        });
+                    });
+                    </script>
+                    
+{% include 'footer.html' %}
+        {% block foot %}
+        {% endblock %}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link href="{{ url_for('static', filename='css/st_cart.css') }}" rel="stylesheet" />
+
+    <title>Cart - Heritage Wear</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="/">
+                <img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Heritage Wear Logo" style="width: 80px; height: 80px; padding-top: 5px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/shop/">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about/">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cart/">
+                            Cart <span class="badge bg-dark text-white ms-1 rounded-pill" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Cart Items Section -->
+    <section class="py-5">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h2 class="fw-bolder">Your Cart</h2>
+            <div id="cart-items" class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                <!-- Cart items will be injected here by JavaScript -->
+            </div>
+            <div class="text-center mt-4">
+                <h3>Total: <span id="total-amount">0.00</span></h3>
+                <button class="btn btn-success" onclick="checkout()">Buy now</button>
+                <button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Function to display cart items
+        function displayCartItems() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            let cartItemsContainer = document.getElementById('cart-items');
+            let totalAmount = 0;
+
+            cartItemsContainer.innerHTML = '';
+            cart.forEach((item, index) => {
+                let productCard = `
+                <div class="col mb-5">
+                    <div class="card h-100">
+                        <!-- Product image -->
+                        <img class="card-img-top" src="${item.image}" alt="${item.name}" />
+                        <!-- Product details -->
+                        <div class="card-body p-4">
+                            <div class="text-center">
+                                <!-- Product name -->
+                                <h5 class="fw-bolder">${item.name}</h5>
+                                <!-- Product quantity -->
+                                <p>Quantity: ${item.quantity}</p>
+                                <!-- Product price -->
+                                <p>₹${item.price} each</p>
+                            </div>
+                        </div>
+                        <!-- Product actions -->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                            <div class="text-center">
+                                <button class="btn btn-outline-dark mt-auto" onclick="removeItem(${index})">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+                cartItemsContainer.insertAdjacentHTML('beforeend', productCard);
+                totalAmount += item.price * item.quantity;
+            });
+
+            document.getElementById('total-amount').innerText = `₹${totalAmount.toFixed(2)}`;
+        }
+
+        // Function to remove a single item from the cart
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            displayCartItems();
+            updateCartCount();
+        }
+
+        // Function to clear the entire cart
+        function clearCart() {
+            localStorage.removeItem('cart');
+            displayCartItems();
+            updateCartCount();
+        }
+
+        // Function to update the cart count in the navbar
+        function updateCartCount() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('cart-count').innerText = cart.length;
+        }
+
+        // Function to simulate checkout process
+        function checkout() {
+            alert("Checkout functionality is not implemented yet.");
+        }
+
+        // Display cart items on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            displayCartItems();
+            updateCartCount();
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Heritage Wear 2023</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

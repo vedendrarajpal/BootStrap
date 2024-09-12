@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Sign-in</title>
+    <style>
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Ensures it stays on top of other elements */
+        }
+
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+        }
+
+        .whatsapp-icon {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/919079111017" class="whatsapp-button">
+        <img src="{{url_for('static', filename = 'static/assets/whatsapp.png')}}" class="whatsapp-icon" width="24" height="24">
+        Contact us on WhatsApp
+    </a>
+
+</body>
+</html>
